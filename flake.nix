@@ -1,12 +1,12 @@
 {
-  description = "StyOS NixOS configuration";
+  description = "Styrene's NixOS configuration";
 
   inputs = {
-    pkgs.url = "github:NixOS/nixpkgs/nixos-nixos-26.05";
-    pkgs_stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    pkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    pkgs_stable.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
-  outputs = { pkgs, pkgs_stable ... }: let
+  outputs = { pkgs, pkgs_stable, ... }: let
     system = "x86_64-linux";
     unstable = import pkgs {
       inherit system;
