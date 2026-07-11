@@ -61,7 +61,7 @@ in
       curl
       gnumake
       file
-      pipx
+      (pipx.overridePythonAttrs (old: { doCheck = false; }))
       stow
       xclip
       home-manager
