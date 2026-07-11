@@ -15,6 +15,7 @@
   in {
     nixosConfigurations.StyreneNix = pkgs.lib.nixosSystem {
       inherit system;
+      inherit pkgs_stable;
       modules = [
         { nixpkgs.overlays = [(final: prev: { inherit unstable; })]; }
         ./configuration.nix
