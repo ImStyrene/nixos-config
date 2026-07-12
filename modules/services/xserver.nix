@@ -2,13 +2,7 @@
 {
   services.xserver = {
     enable = true;
-    videoDrivers = [ "modesetting" ];
-    desktopManager = {
-      lxqt.enable = true;
-      xfce = {
-        enable = true;
-        enableWaylandSession = true;
-      };
-    };
+    videoDrivers = [ "amdgpu" ];
+    desktopManager.lxqt.enable = true;
   };
 }
