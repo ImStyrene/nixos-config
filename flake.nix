@@ -13,9 +13,8 @@
       config.allowUnfree = true;
     };
   in {
-    nixosConfigurations.StyreneNix = pkgs.lib.nixosSystem {
+    nixosConfigurations.StyreneNix = pkgs_stable.lib.nixosSystem {
       inherit system;
-      inherit pkgs_stable;
       modules = [
         { nixpkgs.overlays = [(final: prev: { inherit unstable; })]; }
         ./configuration.nix
