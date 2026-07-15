@@ -3,6 +3,5 @@
 {
   programs.zsh = {
     enable = true;
-    package = pkgs.zsh;
   };
 }
