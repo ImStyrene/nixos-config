@@ -6,7 +6,8 @@
     pkgs_stable.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
-  outputs = { pkgs, pkgs_stable, ... }: let
+  outputs = { pkgs, pkgs_stable, ... }:
+  let
     system = "x86_64-linux";
     unstable = import pkgs {
       inherit system;
